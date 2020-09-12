@@ -1,18 +1,21 @@
-# Nome do projeto
+# Key-Value-Store com gRPC
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+Desenvolver um Key-Value store in memory utilizando o gRPC.
+
+As primitivas do Key-Value Store são:
+
+- put(key, value)
+- get(key) : value
+- getAllKeys() : Key[]
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Laís Helena Oliveira de Paula
+* Vitor Augusto
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Hugo Bastos de Paula
 
 ## Instruções de utilização
 

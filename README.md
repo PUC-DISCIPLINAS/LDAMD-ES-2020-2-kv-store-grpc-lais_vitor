@@ -11,7 +11,7 @@ As primitivas do Key-Value Store são:
 ## Alunos integrantes da equipe
 
 * Laís Helena Oliveira de Paula
-* Vitor Augusto
+* Vitor Augusto Alves de jesus
 
 ## Professores responsáveis
 

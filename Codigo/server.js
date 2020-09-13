@@ -20,10 +20,20 @@ console.log("Servidor executando no enderaco http://0.0.0.0:40000");
 
 server.start();
 
-const todos = []
+const todos = [
+    {
+        id: "1",
+        value: "Teste 1",
+    },
+    {
+        id: "2",
+        value: "Teste 2",
+    }
+];
+
 function put(call, callback) {
     const Item = {
-        "key": todos.length + 1,
+        "id": todos.length + 1,
         "value": call.request.value
     }
     todos.push(Item)
@@ -31,12 +41,15 @@ function put(call, callback) {
 }
 
 function getKey(call, callback) {
-    let result = todos.find(x => x.Item.key == call);
+    let result = todos.find(
+        n => n.id == call.request.id);
     if (result) {
-        callback(null, result.Item);
-    } 
+        callback(null, result);
+    }
+    else {
+        callback({ code: grpc.status.NOT_FOUND, details: "Not found!" });
+    }
 }
-
 
 function getAllKeysStream(call, callback) {
     todos.forEach(t => call.write(t));

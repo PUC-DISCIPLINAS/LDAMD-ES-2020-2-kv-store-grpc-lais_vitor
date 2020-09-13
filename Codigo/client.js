@@ -21,14 +21,15 @@ if (comando.startsWith("listarTodos")) {
 }
 
 if (comando.startsWith("listarUm")) {
-    const call = client.getKey(valor);
-    console.log(call);
+    client.getKey({ id: valor }, (err, response) => {
+        console.log("Item recebido " + JSON.stringify(response))
+    })
 }
 
 if (comando.startsWith("adicionar")) {
     console.log(valor)
     client.put({
-        "key": -1,
+        "id": -1,
         "value": valor
     }, (err, response) => {
         console.log("Item recebido " + JSON.stringify(response))

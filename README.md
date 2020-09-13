@@ -19,4 +19,10 @@ As primitivas do Key-Value Store são:
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Para rodar o sistema, seguir os seguintes passos:
+* Instalar as dependências do npm: npm install grpc @grpc/proto-loader
+* Instalar o grpc: npm install grpc @grpc/proto-loader
+* Rodar o npm: npm init -y
+* Rodar a classe server:  node server.js
+* Rodar a classe client:  node client.js (Passando os argumentos comando e valor)
+

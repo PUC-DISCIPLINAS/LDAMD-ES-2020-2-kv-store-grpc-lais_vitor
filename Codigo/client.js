@@ -10,35 +10,3 @@ const valor = process.argv[3];
 const client = new kvsPackage.Todo("localhost:40000",
     grpc.credentials.createInsecure())
 
-
-/*
-client.getAllKeys(null, (err, response) => {
-
-    console.log("read the todos from server " + JSON.stringify(response))
-    if (!response.items)
-        response.items.forEach(a=>console.log(a.value));
-})
-*/
-if (comando.startsWith("listarTodos")) {
-    const call = client.getAllKeysStream();
-    call.on("data", item => {
-        console.log("Itens no servidor " + JSON.stringify(item))
-    })
-
-    call.on("end", e => console.log("acao finalizada!"))
-}
-
-if (comando.startsWith("listarUm")) {
-    const call = client.getKey(valor);
-    console.log(call);
-}
-
-if (comando.startsWith("adicionar")) {
-    console.log(valor)
-    client.put({
-        "key": -1,
-        "value": valor
-    }, (err, response) => {
-        console.log("Item recebido " + JSON.stringify(response))
-    })
-}

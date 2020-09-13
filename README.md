@@ -27,7 +27,7 @@ Para rodar o sistema, seguir os seguintes passos:
 * Rodar a classe client:  node client.js (Passando os argumentos comando e valor)
 
 ## Comandos:
-listarTodos: Mostra todas as chaves do sistema.
-ListarUm: Mostra o valor da chave desejada.
-Adicionar: Adiciona um valor específico no sistema.
+* listarTodos: Mostra todas as chaves do sistema.
+* ListarUm: Mostra o valor da chave desejada.
+* Adicionar: Adiciona um valor específico no sistema.
 
